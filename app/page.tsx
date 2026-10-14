@@ -1,55 +1,46 @@
 import SignTrackerDemo from "./components/sign-tracker-demo";
 import headshot from "./assets/NDH-Headshot.jpg";
+import utcLogo from "./assets/utc-logo.jpg";
+import Image from "next/image";
 
 const experience = [
-  "Build mobile-first Angular applications that connect to REST APIs and support customers nationwide.",
-  "Led a legacy Angular upgrade from v13 to v21, adopting standalone components, signals, and modern template control flow.",
+  "Build customer-facing Angular applications used by 500+ waste companies nationwide, with REST APIs behind them.",
+  "Upgraded the Angular application from v13 to v21, adopting standalone components, signals, and control flow.",
   "Modernize dependencies and deprecated patterns to make Angular codebases easier to maintain and safer to upgrade.",
   "Design TypeScript microservices on AWS Lambda and API Gateway, with infrastructure defined in CDK and deployed through CloudFormation.",
-  "Build Java backend-for-frontend features, contribute to EventBridge ingestion pipelines, and model efficient DynamoDB access patterns.",
-  "Partner with product, QA, and engineering; review code and mentor developers on clean code and responsible AI use.",
+  "Build Java backend-for-frontend features, contribute to EventBridge ingestion pipelines, and model DynamoDB access patterns.",
+  "Partner with product, QA, and engineering, and review code.",
 ];
 
 const skillGroups = [
   {
-    label: "Frontend",
+    label: "Use daily",
     skills: [
-      "Angular 21",
+      "Angular",
       "TypeScript",
-      "JavaScript",
       "RxJS",
-      "React",
-      "React Native",
-      "HTML & CSS",
-    ],
-  },
-  {
-    label: "Backend & cloud",
-    skills: [
       "AWS Lambda",
       "API Gateway",
       "EventBridge",
       "DynamoDB",
-      "CloudFormation",
-      "CDK",
-      "Node.js",
+      "CloudFormation/CDK",
       "Java",
     ],
   },
   {
-    label: "Data",
-    skills: ["DynamoDB", "PostgreSQL", "MySQL", "SQL", "OpenSearch"],
-  },
-  {
-    label: "Tools",
+    label: "Used on projects",
     skills: [
-      "Git",
-      "Docker",
+      "React",
+      "React Native",
+      "Expo",
       "Firebase",
-      "Maven",
-      "Postman",
-      "Selenium",
-      "JIRA",
+      "Google Maps API",
+      "Node.js",
+      "PostgreSQL",
+      "MySQL",
+      "OpenSearch",
+      "Docker",
+      "Git",
     ],
   },
 ];
@@ -89,9 +80,9 @@ export default function Home() {
           <span className="brand-name">Noah Huffman</span>
         </a>
         <nav className="main-nav" aria-label="Main navigation">
-          <a href="#about">About</a>
-          <a href="#work">Work</a>
           <a href="#experience">Experience</a>
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
           <a className="nav-contact" href="#contact">
             Let&apos;s talk <ArrowIcon diagonal />
           </a>
@@ -106,12 +97,15 @@ export default function Home() {
               <span className="eyebrow-divider">/</span> Chattanooga, TN
             </p>
             <h1 id="hero-title">
-              I build software that helps <span>real work</span> move forward.
+              Full-stack engineer.
+              <br />
+              <span>Angular, TypeScript, AWS.</span>
             </h1>
             <p className="hero-intro">
-              Frontend-focused full-stack engineer making thoughtful Angular
-              applications, dependable AWS services, and useful mobile tools for
-              people in the field.
+              I’m a full-stack engineer at Environmental Solutions Group,
+              building the fleet management platform used by 500+ waste
+              companies, including Waste Management, Waste Connections, and
+              Republic Services.
             </p>
             <div className="hero-actions">
               <a className="button button-dark" href="#work">
@@ -129,71 +123,22 @@ export default function Home() {
             </div>
           </div>
 
-          <div
-            className="hero-art"
-            aria-label="A snapshot of Noah's engineering focus"
-          >
-            <div className="orbit orbit-one" />
-            <div className="orbit orbit-two" />
-            <div className="hero-art-top">
-              <span>BUILT WITH INTENTION</span>
-              <span>01 — 04</span>
+          <aside className="hero-art" aria-label="Fleet management platform">
+            <div className="platform-panel">
+              <p className="platform-label">FLEET MANAGEMENT PLATFORM</p>
+              <h2>Platform manages</h2>
+              <ul>
+                <li>Trucks</li>
+                <li>Compactors</li>
+                <li>Drivers</li>
+                <li>Safety events</li>
+                <li>Service events</li>
+              </ul>
+              <p className="platform-scale">
+                <strong>500+</strong> waste companies
+              </p>
             </div>
-            <div className="hero-code-card">
-              <div className="code-card-head">
-                <span className="code-lights">
-                  <i />
-                  <i />
-                  <i />
-                </span>
-                <span>making things work.ts</span>
-                <span className="code-card-menu">···</span>
-              </div>
-              <div className="code-lines" aria-hidden="true">
-                <p>
-                  <span className="code-muted">01</span>{" "}
-                  <span className="code-purple">const</span> work = &#123;
-                </p>
-                <p>
-                  <span className="code-muted">02</span> &nbsp;builtFor:{" "}
-                  <span className="code-green">&quot;people&quot;</span>,
-                </p>
-                <p>
-                  <span className="code-muted">03</span> &nbsp;madeTo:{" "}
-                  <span className="code-green">&quot;last&quot;</span>,
-                </p>
-                <p>
-                  <span className="code-muted">04</span> &nbsp;always:{" "}
-                  <span className="code-yellow">true</span>
-                </p>
-                <p>
-                  <span className="code-muted">05</span> &#125;;
-                </p>
-              </div>
-              <div className="code-card-foot">
-                <span>
-                  <i className="tiny-green-dot" /> All systems thoughtful
-                </span>
-                <span>∞</span>
-              </div>
-            </div>
-            <div className="hero-note">
-              <span className="note-star">✳</span>
-              <span>
-                Good software
-                <br />
-                starts with listening.
-              </span>
-            </div>
-            <div className="hero-art-caption">
-              FROM FIRST CLICK
-              <br />
-              TO CLOUD DEPLOY
-            </div>
-          </div>
-          <a className="scroll-cue" href="#about">
-            <span /> Scroll to explore
-          </a>
+          </aside>
         </section>
 
         <section className="proof-strip" aria-label="Career highlights">
@@ -211,23 +156,23 @@ export default function Home() {
             <div className="proof-rule" />
             <div className="proof-item">
               <span className="proof-number">
-                13<span>→</span>21
+                500<span>+</span>
               </span>
               <span className="proof-label">
-                Angular upgrade
+                waste companies
                 <br />
-                led end to end
+                use the platform
               </span>
             </div>
             <div className="proof-rule" />
             <div className="proof-item">
               <span className="proof-number">
-                1<span>→</span>N
+                30,000<span>+</span>
               </span>
               <span className="proof-label">
-                frontend through
+                live trucks
                 <br />
-                serverless AWS
+                on the platform
               </span>
             </div>
             <div className="proof-location">
@@ -237,57 +182,58 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="about-section section-wrap section-pad" id="about">
+        <section
+          className="experience-section section-wrap section-pad"
+          id="experience"
+        >
           <div className="section-kicker">
-            <span>01</span> / A LITTLE ABOUT ME
+            <span>01</span> / EXPERIENCE
           </div>
-          <div className="about-grid">
-            <h2>
-              Curious by nature.
-              <br />
-              <span>Engineer by craft.</span>
-            </h2>
-            <div className="about-copy">
-              <p>
-                I&apos;m Noah, a software engineer who likes understanding the
-                whole picture: the person using the product, the interface they
-                rely on, and the services quietly making it all work.
-              </p>
-              <p>
-                Over the last three-plus years, I&apos;ve shipped
-                customer-facing features, modernized a large Angular
-                application, and built serverless AWS services. Outside my day
-                job, I led a mobile app project that brought a field team&apos;s
-                work onto a shared map.
-              </p>
-              <a
-                className="inline-link"
-                href="https://huffmansoftware.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                More about my work <ArrowIcon diagonal />
-              </a>
+          <div className="experience-heading">
+            <h2>Experience</h2>
+          </div>
+          <article className="timeline-entry">
+            <div className="timeline-date">
+              <span className="timeline-dot" />
+              MAR 2023 — PRESENT
             </div>
-          </div>
+            <div className="timeline-body">
+              <div className="timeline-title">
+                <div>
+                  <h3>Environmental Solutions Group</h3>
+                  <p>
+                    Terex company <span>·</span> Software Engineer II, promoted
+                    March 2026
+                  </p>
+                </div>
+                <span className="timeline-location">Chattanooga, TN</span>
+              </div>
+              <ul>
+                {experience.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+              <div className="timeline-tags">
+                <span>Angular</span>
+                <span>TypeScript</span>
+                <span>AWS</span>
+                <span>Java</span>
+                <span>DynamoDB</span>
+              </div>
+            </div>
+          </article>
         </section>
 
         <section className="work-section section-pad" id="work">
           <div className="section-wrap">
             <div className="section-kicker">
-              <span>02</span> / SELECTED WORK
+              <span>02</span> / PROJECTS
             </div>
             <div className="work-heading">
-              <div>
-                <h2>
-                  From the field,
-                  <br />
-                  <span>built for the field.</span>
-                </h2>
-              </div>
+              <h2>Projects</h2>
               <p>
-                A side project with a simple goal: give a mobile team one clear
-                place to see what needs doing and where.
+                A freelance project: a React Native app for a junk removal
+                crew to track signs on a shared map.
               </p>
             </div>
 
@@ -295,9 +241,8 @@ export default function Home() {
               <div className="project-topline">
                 <div className="project-label">
                   <span className="project-index">01</span>
-                  <span>FREELANCE · MOBILE APP</span>
+                  <span>FREELANCE PROJECT · MOBILE APP</span>
                 </div>
-                <span className="project-date">MAR — JUN 2025</span>
               </div>
               <div className="project-layout">
                 <div className="project-info">
@@ -323,16 +268,17 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <p className="project-overline">LEAD DEVELOPER</p>
+                  <p className="project-overline">
+                    Solo developer
+                  </p>
                   <h3>
                     Sign Tracking
                     <br />
                     Mobile App
                   </h3>
                   <p className="project-description">
-                    A shared, map-first workspace for a junk removal crew to
-                    place signs, attach photos, organize jobs, and keep everyone
-                    in sync.
+                    A React Native app for a junk removal crew to add sign
+                    locations and photos, group jobs, and share updates.
                   </p>
                   <div className="project-chips">
                     <span>React Native</span>
@@ -343,10 +289,10 @@ export default function Home() {
                   <div className="project-outcome">
                     <span className="outcome-icon">↗</span>
                     <span>
-                      <strong>From prototype to practical tool</strong>
+                      <strong>Project features</strong>
                       <br />
-                      Designed around the team&apos;s real on-the-ground
-                      workflow.
+                      Map pins, photos, grouped jobs, sign-in, and shared
+                      updates.
                     </span>
                   </div>
                 </div>
@@ -360,147 +306,77 @@ export default function Home() {
                   <SignTrackerDemo />
                 </div>
               </div>
-              <div className="project-footnote">
-                <span>THE CHALLENGE</span>
-                <p>
-                  Replace scattered updates with a shared picture of the work,
-                  from placing a pin to finding the next stop.
-                </p>
-              </div>
             </article>
 
             <div className="project-details">
               <div className="detail-cell">
                 <span className="detail-number">01</span>
-                <h4>Pin it in place</h4>
+                <h4>Map pins and photos</h4>
                 <p>
-                  Drop a location on the map and add photos so the team knows
-                  what to look for.
+                  Add a sign location to the map and attach photos.
                 </p>
               </div>
               <div className="detail-cell">
                 <span className="detail-number">02</span>
-                <h4>Keep work organized</h4>
+                <h4>Group jobs</h4>
                 <p>
-                  Group locations into clear layers and find the right stop
-                  without the clutter.
+                  Organize locations into layers by job.
                 </p>
               </div>
               <div className="detail-cell">
                 <span className="detail-number">03</span>
-                <h4>Stay in sync</h4>
+                <h4>Share updates</h4>
                 <p>
-                  Firebase supports shared access, sign-in, and real-time team
-                  coordination.
+                  Firebase provides sign-in and real-time shared updates.
                 </p>
               </div>
               <div className="detail-cell">
                 <span className="detail-number">04</span>
-                <h4>Plan the next move</h4>
+                <h4>Order a route</h4>
                 <p>
-                  Location-aware route ordering helps crews work through pins
-                  more efficiently.
+                  Order locations using Google Maps Route Optimization API.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        <section
-          className="experience-section section-wrap section-pad"
-          id="experience"
-        >
+        <section className="about-section section-wrap section-pad" id="about">
           <div className="section-kicker">
-            <span>03</span> / WHERE I&apos;VE BEEN
+            <span>03</span> / ABOUT
           </div>
-          <div className="experience-heading">
-            <h2>
-              Experience that
-              <br />
-              <span>keeps compounding.</span>
-            </h2>
-            <p>
-              Good work is a team sport. Here&apos;s what I&apos;ve been
-              building with mine.
-            </p>
-          </div>
-          <article className="timeline-entry">
-            <div className="timeline-date">
-              <span className="timeline-dot" />
-              MAR 2023 — PRESENT
+          <div className="about-grid">
+            <div className="about-profile">
+              <Image
+                className="about-headshot"
+                src={headshot}
+                alt="Noah Huffman"
+                priority
+              />
+              <h2>About me</h2>
             </div>
-            <div className="timeline-body">
-              <div className="timeline-title">
-                <div>
-                  <h3>Environmental Solutions Group</h3>
-                  <p>
-                    Software Engineer II <span>·</span> promoted March 2026
-                  </p>
-                </div>
-                <span className="timeline-location">Chattanooga, TN</span>
-              </div>
-              <ul>
-                {experience.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-              <div className="timeline-tags">
-                <span>Angular</span>
-                <span>TypeScript</span>
-                <span>AWS</span>
-                <span>Java</span>
-                <span>DynamoDB</span>
-              </div>
-            </div>
-          </article>
-          <article className="timeline-entry freelance-entry">
-            <div className="timeline-date">
-              <span className="timeline-dot" />
-              MAR — JUN 2025
-            </div>
-            <div className="timeline-body">
-              <div className="timeline-title">
-                <div>
-                  <h3>Sign Tracking Mobile App</h3>
-                  <p>
-                    Lead Developer <span>·</span> Freelance project
-                  </p>
-                </div>
-                <a className="timeline-link" href="#work">
-                  View the project <ArrowIcon diagonal />
-                </a>
-              </div>
-              <p className="freelance-summary">
-                Delivered a working React Native prototype for a junk removal
-                company, featuring map-based pin placement, photo attachments,
-                grouped layers, and real-time collaboration. Added route
-                optimization using location data and pathfinding algorithms.
+            <div className="about-copy">
+              <p>
+                I build Angular and TypeScript features for customer-facing
+                fleet management apps, and backend services with Lambda, API
+                Gateway, DynamoDB, and CDK.
               </p>
-              <div className="timeline-tags">
-                <span>React Native</span>
-                <span>Expo</span>
-                <span>Firebase</span>
-                <span>Google Maps API</span>
-              </div>
+              <p>
+                My freelance project was a sign-tracking mobile app for a junk
+                removal crew, built with React Native, Expo, Firebase, and
+                Google Maps API.
+              </p>
             </div>
-          </article>
+          </div>
         </section>
 
         <section className="skills-section section-pad">
           <div className="section-wrap">
             <div className="section-kicker">
-              <span>04</span> / MY TOOLKIT
+              <span>04</span> / SKILLS
             </div>
             <div className="skills-heading">
-              <h2>
-                The right tool
-                <br />
-                <span>for the job.</span>
-              </h2>
-              <p>
-                Technologies I use to take ideas from a first sketch to
-                something people can count on.
-              </p>
+              <h2>Skills</h2>
             </div>
             <div className="skills-grid">
               {skillGroups.map((group, index) => (
@@ -523,11 +399,18 @@ export default function Home() {
 
         <section className="education-section section-wrap section-pad">
           <div className="section-kicker">
-            <span>05</span> / THE FOUNDATION
+            <span>05</span> / EDUCATION
           </div>
           <div className="education-card">
             <div className="education-emblem" aria-hidden="true">
-              <span>UTC</span>
+              <Image
+                src={utcLogo}
+                alt=""
+                className="education-emblem-image"
+                style={{ borderRadius: "50%" }}
+                width={45}
+                height={45}
+              />
               <i>✳</i>
             </div>
             <div className="education-content">
@@ -537,7 +420,7 @@ export default function Home() {
                 <br />
                 at Chattanooga
               </h2>
-              <p>B.S. in Computer Science</p>
+              <p>B.S. in Computer Science with a minor in Entrepreneurship</p>
             </div>
             <span className="education-years">2020 — 2024</span>
           </div>
@@ -545,40 +428,35 @@ export default function Home() {
 
         <section className="contact-section section-wrap" id="contact">
           <div className="contact-spark">✳</div>
-          <p className="eyebrow">HAVE A GOOD ONE IN MIND?</p>
-          <h2>
-            Let&apos;s make
-            <br />
-            <span>something useful.</span>
-          </h2>
-          <a
-            className="button button-lime"
-            href="mailto:noahhuffman05@gmail.com"
-          >
-            Say hello <ArrowIcon diagonal />
-          </a>
-          <p className="contact-caption">
-            Always glad to meet thoughtful people doing meaningful work.
-          </p>
+          <p className="eyebrow">CONTACT</p>
+          <h2>Let's connect!</h2>
+          <div className="contact-actions">
+            <a
+              className="button button-lime"
+              href="mailto:noahhuffman05@gmail.com"
+            >
+              Email me <ArrowIcon diagonal />
+            </a>
+            <a
+              className="button button-outline"
+              href="https://linkedin.com/in/noahhuffman05"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn <ArrowIcon diagonal />
+            </a>
+            <a className="button button-outline" href="/NDH-Resume.pdf">
+              Download resume (PDF) <ArrowIcon />
+            </a>
+          </div>
         </section>
       </main>
 
       <footer className="site-footer">
         <div className="footer-inner">
-          <div className="footer-person">
-            <div className="footer-avatar">
-              <span
-                className="avatar-monogram"
-                role="img"
-                aria-label="Noah Huffman Photo"
-              >
-                <img src={headshot.src} alt="NH" className="footer-avatar-img" />
-              </span>
-            </div>
-            <div className="footer-identity">
-              <span className="footer-name">Noah Huffman</span>
-              <span className="footer-small">Software Engineer II</span>
-            </div>
+          <div className="footer-identity">
+            <span className="footer-name">Noah Huffman</span>
+            <span className="footer-small">Software Engineer II</span>
           </div>
           <div className="footer-links">
             <a
@@ -601,10 +479,7 @@ export default function Home() {
                 <path d="M5.2 3.4a2.15 2.15 0 1 1 0 4.3 2.15 2.15 0 0 1 0-4.3ZM3.4 9h3.7v11.6H3.4V9Zm5.9 0h3.55v1.58h.05c.5-.95 1.7-1.95 3.5-1.95 3.75 0 4.45 2.47 4.45 5.68v6.29h-3.7v-5.58c0-1.33-.02-3.04-1.85-3.04s-2.13 1.44-2.13 2.94v5.68H9.3V9Z" />
               </svg>
             </a>
-            <a
-              href="https://huffmansoftware.com"
-              aria-label="Website"
-            >
+            <a href="https://huffmansoftware.com" aria-label="Website">
               <svg
                 viewBox="0 0 24 24"
                 aria-hidden="true"

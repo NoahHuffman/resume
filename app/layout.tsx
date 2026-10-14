@@ -15,7 +15,20 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Noah Huffman | Software Engineer",
   description:
-    "Noah Huffman is a Chattanooga-based software engineer building thoughtful Angular applications, dependable AWS services, and useful mobile tools.",
+    "Noah Huffman is a full-stack software engineer in Chattanooga, TN. Angular, TypeScript, and AWS. Builds a fleet management platform used by 500+ waste companies.",
+  metadataBase: new URL("https://huffmansoftware.com"),
+  openGraph: {
+    title: "Noah Huffman | Software Engineer",
+    description:
+      "Noah Huffman is a full-stack software engineer in Chattanooga, TN. Angular, TypeScript, and AWS. Builds a fleet management platform used by 500+ waste companies.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Noah Huffman | Software Engineer",
+    description:
+      "Noah Huffman is a full-stack software engineer in Chattanooga, TN. Angular, TypeScript, and AWS. Builds a fleet management platform used by 500+ waste companies.",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
