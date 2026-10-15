@@ -13,4 +13,4 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-Live site: https://huffmansoftware.com
+Live site: [https://huffmansoftware.com](https://huffmansoftware.com)
