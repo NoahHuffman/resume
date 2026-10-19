@@ -45,7 +45,7 @@ const skills = [
   "Git",
   "GitHub",
   "GitLab",
-  "Jenkins"
+  "Jenkins",
 ];
 
 export default function ResumePage() {
@@ -129,7 +129,9 @@ export default function ResumePage() {
                 </div>
                 <div className="education-content">
                   <h3>University of Tennessee at Chattanooga</h3>
-                  <p>B.S. in Computer Science with a minor in Entrepreneurship</p>
+                  <p>
+                    B.S. in Computer Science with a minor in Entrepreneurship
+                  </p>
                 </div>
                 <span className="education-years">2020 &mdash; 2024</span>
               </div>

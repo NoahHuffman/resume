@@ -102,7 +102,7 @@ button {
 .brand-name {
   font-size: 13px;
   font-weight: 650;
-  letter-spacing: -.3px;
+  letter-spacing: -0.3px;
   white-space: nowrap;
 }
 
@@ -178,17 +178,17 @@ button {
   margin: 25px 0 0;
   font-size: clamp(42px, 11vw, 68px);
   font-weight: 520;
-  letter-spacing: -.065em;
-  line-height: .99;
+  letter-spacing: -0.065em;
+  line-height: 0.99;
 }
 
 .hero h1 span {
   color: #627da9;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: .98em;
+  font-size: 0.98em;
   font-style: italic;
   font-weight: 400;
-  letter-spacing: -.07em;
+  letter-spacing: -0.07em;
 }
 
 .hero-intro {
@@ -218,7 +218,9 @@ button {
   font-size: 12px;
   font-weight: 600;
   text-decoration: none;
-  transition: transform .2s ease, background .2s ease;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
 }
 
 .button:hover {
@@ -272,17 +274,21 @@ button {
   border: 1px solid #d7dee8;
   border-radius: 4px;
   background:
-    radial-gradient(ellipse at 47% 46%, rgba(123, 153, 207, .18), transparent 41%),
+    radial-gradient(
+      ellipse at 47% 46%,
+      rgba(123, 153, 207, 0.18),
+      transparent 41%
+    ),
     linear-gradient(135deg, #edf0f5 0%, #e3e9f1 100%);
 }
 
 .platform-panel {
   width: min(78%, 370px);
   padding: 26px;
-  border: 1px solid rgba(255, 255, 255, .8);
+  border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 4px;
-  background: rgba(248, 250, 253, .9);
-  box-shadow: 0 18px 42px rgba(32, 43, 60, .1);
+  background: rgba(248, 250, 253, 0.9);
+  box-shadow: 0 18px 42px rgba(32, 43, 60, 0.1);
 }
 
 .platform-label {
@@ -297,7 +303,7 @@ button {
   margin: 0;
   font-size: 23px;
   font-weight: 550;
-  letter-spacing: -.7px;
+  letter-spacing: -0.7px;
 }
 
 .platform-panel ul {
@@ -355,7 +361,7 @@ button {
 
 .proof-number span {
   font-family: Georgia, serif;
-  font-size: .78em;
+  font-size: 0.78em;
   font-style: italic;
 }
 
@@ -427,7 +433,7 @@ button {
   margin: 0;
   font-size: clamp(28px, 7vw, 42px);
   font-weight: 500;
-  letter-spacing: -.055em;
+  letter-spacing: -0.055em;
   line-height: 1.09;
 }
 
@@ -501,7 +507,7 @@ button {
   color: #536174;
   font-size: 12px;
   font-weight: 650;
-  letter-spacing: .85px;
+  letter-spacing: 0.85px;
 }
 
 .demo-intro,
@@ -561,7 +567,7 @@ button {
   margin: 0;
   font-size: clamp(28px, 7vw, 39px);
   font-weight: 500;
-  letter-spacing: -.06em;
+  letter-spacing: -0.06em;
   line-height: 1.02;
 }
 
@@ -626,7 +632,7 @@ button {
   padding: 0 10px;
   border-bottom: 1px solid #e6e9e2;
   font-size: 6px;
-  letter-spacing: .55px;
+  letter-spacing: 0.55px;
 }
 
 .demo-intro > span:first-child {
@@ -670,7 +676,7 @@ button {
   color: #34433a;
   font-size: 9px;
   font-weight: 700;
-  letter-spacing: -.35px;
+  letter-spacing: -0.35px;
 }
 
 .tracker-mark {
@@ -780,7 +786,7 @@ button {
 .tracker-heading > div > p {
   margin: 0 0 3px;
   font-size: 5px;
-  letter-spacing: .55px;
+  letter-spacing: 0.55px;
 }
 
 .tracker-heading h4 {
@@ -788,7 +794,7 @@ button {
   color: #354037;
   font-size: 11px;
   font-weight: 620;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
 }
 
 .tracker-heading h4 span {
@@ -871,7 +877,7 @@ button {
 .view-switch button.view-active {
   background: white;
   color: #405a82;
-  box-shadow: 0 1px 3px rgba(36, 53, 40, .1);
+  box-shadow: 0 1px 3px rgba(36, 53, 40, 0.1);
 }
 
 .view-switch svg {
@@ -898,8 +904,20 @@ button {
   overflow: hidden;
   background-color: #e9eee4;
   background-image:
-    linear-gradient(26deg, transparent 48.9%, rgba(255,255,255,.7) 49.3%, rgba(255,255,255,.7) 50.1%, transparent 50.5%),
-    linear-gradient(151deg, transparent 48%, rgba(255,255,255,.65) 48.4%, rgba(255,255,255,.65) 49.1%, transparent 49.5%);
+    linear-gradient(
+      26deg,
+      transparent 48.9%,
+      rgba(255, 255, 255, 0.7) 49.3%,
+      rgba(255, 255, 255, 0.7) 50.1%,
+      transparent 50.5%
+    ),
+    linear-gradient(
+      151deg,
+      transparent 48%,
+      rgba(255, 255, 255, 0.65) 48.4%,
+      rgba(255, 255, 255, 0.65) 49.1%,
+      transparent 49.5%
+    );
 }
 
 .map-water {
@@ -916,7 +934,7 @@ button {
 .map-green-space {
   position: absolute;
   z-index: 1;
-  border: 1px solid rgba(123, 149, 194, .24);
+  border: 1px solid rgba(123, 149, 194, 0.24);
   border-radius: 40% 35% 45% 25%;
   background: #dce5f2;
 }
@@ -941,20 +959,32 @@ button {
   position: absolute;
   z-index: 2;
   inset: 0;
-  color: rgba(77, 100, 137, .7);
+  color: rgba(77, 100, 137, 0.7);
   font-size: 5px;
   font-weight: 650;
-  letter-spacing: .7px;
+  letter-spacing: 0.7px;
 }
 
 .map-neighborhood span {
   position: absolute;
 }
 
-.map-neighborhood span:nth-child(1) { top: 34%; left: 5%; }
-.map-neighborhood span:nth-child(2) { top: 8%; right: 7%; }
-.map-neighborhood span:nth-child(3) { right: 9%; bottom: 23%; }
-.map-neighborhood span:nth-child(4) { bottom: 9%; left: 7%; }
+.map-neighborhood span:nth-child(1) {
+  top: 34%;
+  left: 5%;
+}
+.map-neighborhood span:nth-child(2) {
+  top: 8%;
+  right: 7%;
+}
+.map-neighborhood span:nth-child(3) {
+  right: 9%;
+  bottom: 23%;
+}
+.map-neighborhood span:nth-child(4) {
+  bottom: 9%;
+  left: 7%;
+}
 
 .map-streets {
   position: absolute;
@@ -967,7 +997,7 @@ button {
 }
 
 .map-streets path {
-  stroke: rgba(255, 255, 255, .82);
+  stroke: rgba(255, 255, 255, 0.82);
   stroke-width: 5;
   stroke-linecap: round;
 }
@@ -986,9 +1016,9 @@ button {
 .map-label {
   position: absolute;
   z-index: 3;
-  color: rgba(78, 105, 102, .73);
+  color: rgba(78, 105, 102, 0.73);
   font-size: 5px;
-  letter-spacing: .6px;
+  letter-spacing: 0.6px;
 }
 
 .map-label-river {
@@ -1015,10 +1045,12 @@ button {
   border: 2px solid white;
   border-radius: 50% 50% 50% 3px;
   color: white;
-  box-shadow: 0 2px 5px rgba(40, 51, 42, .2);
-  transform: translate(-50%, -50%) rotate(-45deg) scale(.87);
+  box-shadow: 0 2px 5px rgba(40, 51, 42, 0.2);
+  transform: translate(-50%, -50%) rotate(-45deg) scale(0.87);
   cursor: pointer;
-  transition: transform .18s ease, box-shadow .18s ease;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
 }
 
 .map-pin span {
@@ -1030,7 +1062,9 @@ button {
 .map-pin:hover,
 .map-pin.pin-selected {
   z-index: 5;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, .75), 0 3px 8px rgba(40, 51, 42, .24);
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.75),
+    0 3px 8px rgba(40, 51, 42, 0.24);
   transform: translate(-50%, -50%) rotate(-45deg) scale(1);
 }
 
@@ -1113,7 +1147,13 @@ button {
   border: 1px solid #e9e9dc;
   border-radius: 3px;
   background:
-    linear-gradient(155deg, transparent 45%, rgba(255,255,255,.8) 46%, rgba(255,255,255,.8) 49%, transparent 50%),
+    linear-gradient(
+      155deg,
+      transparent 45%,
+      rgba(255, 255, 255, 0.8) 46%,
+      rgba(255, 255, 255, 0.8) 49%,
+      transparent 50%
+    ),
     linear-gradient(30deg, #e9ece1, #dce6d4);
 }
 
@@ -1122,7 +1162,7 @@ button {
   position: absolute;
   width: 120%;
   height: 10px;
-  border: 1px solid rgba(255,255,255,.85);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   content: "";
   transform: rotate(-17deg);
 }
@@ -1141,7 +1181,7 @@ button {
   border: 2px solid white;
   border-radius: 50% 50% 50% 3px;
   color: white;
-  box-shadow: 0 2px 6px rgba(0,0,0,.13);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.13);
   transform: rotate(-45deg);
 }
 
@@ -1156,13 +1196,19 @@ button {
   top: 32px;
   color: #727e6f;
   font-size: 4px;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   transform: rotate(45deg);
 }
 
-.thumb-coral { background: #d78068; }
-.thumb-blue { background: #718bbc; }
-.thumb-green { background: #718bb8; }
+.thumb-coral {
+  background: #d78068;
+}
+.thumb-blue {
+  background: #718bbc;
+}
+.thumb-green {
+  background: #718bb8;
+}
 
 .location-status,
 .list-status {
@@ -1180,7 +1226,7 @@ button {
   z-index: 1;
   padding: 4px 5px;
   border-radius: 10px;
-  background: rgba(255,255,255,.9);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .location-status i,
@@ -1191,9 +1237,15 @@ button {
   background: currentColor;
 }
 
-.status-coral { color: #ba705c; }
-.status-blue { color: #6681b2; }
-.status-green { color: #5876a7; }
+.status-coral {
+  color: #ba705c;
+}
+.status-blue {
+  color: #6681b2;
+}
+.status-green {
+  color: #5876a7;
+}
 
 .map-sidebar h5 {
   margin: 8px 0 4px;
@@ -1231,7 +1283,7 @@ button {
 .location-meta span,
 .layers-label {
   font-size: 5px;
-  letter-spacing: .6px;
+  letter-spacing: 0.6px;
 }
 
 .location-meta strong {
@@ -1321,8 +1373,8 @@ button {
   border-radius: 50% 50% 50% 3px;
   color: white;
   font-size: 7px;
-  box-shadow: 0 1px 3px rgba(0,0,0,.12);
-  transform: rotate(-45deg) scale(.86);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  transform: rotate(-45deg) scale(0.86);
 }
 
 .list-pin-icon::first-letter {
@@ -1388,7 +1440,7 @@ button {
   color: #536174;
   font-size: 12px;
   font-weight: 650;
-  letter-spacing: .9px;
+  letter-spacing: 0.9px;
 }
 
 .project-footnote p {
@@ -1416,7 +1468,7 @@ button {
   margin: 9px 0 6px;
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: -.3px;
+  letter-spacing: -0.3px;
 }
 
 .detail-cell p {
@@ -1469,7 +1521,7 @@ button {
   margin: 0;
   font-size: 17px;
   font-weight: 580;
-  letter-spacing: -.5px;
+  letter-spacing: -0.5px;
 }
 
 .timeline-title p {
@@ -1629,12 +1681,12 @@ button {
 
 .education-content .project-overline {
   font-size: 12px;
-  letter-spacing: .7px;
+  letter-spacing: 0.7px;
 }
 
 .education-content h2 {
   font-size: 15px;
-  letter-spacing: -.4px;
+  letter-spacing: -0.4px;
   line-height: 1.25;
 }
 
@@ -1671,9 +1723,11 @@ button {
   bottom: -245px;
   width: 360px;
   height: 360px;
-  border: 1px solid rgba(185, 202, 240, .18);
+  border: 1px solid rgba(185, 202, 240, 0.18);
   border-radius: 50%;
-  box-shadow: 0 0 0 35px rgba(185, 202, 240, .05), 0 0 0 75px rgba(185, 202, 240, .035);
+  box-shadow:
+    0 0 0 35px rgba(185, 202, 240, 0.05),
+    0 0 0 75px rgba(185, 202, 240, 0.035);
   content: "";
 }
 
@@ -1728,13 +1782,13 @@ button {
 }
 
 .button-outline {
-  border: 1px solid rgba(220, 230, 246, .45);
+  border: 1px solid rgba(220, 230, 246, 0.45);
   background: transparent;
   color: #f5f6f2;
 }
 
 .button-outline:hover {
-  background: rgba(220, 230, 246, .12);
+  background: rgba(220, 230, 246, 0.12);
 }
 
 .resume-note {
@@ -1769,7 +1823,7 @@ button {
   width: 120px;
   height: 120px;
   flex: 0 0 auto;
-  border: 1px solid rgba(220, 230, 246, .24);
+  border: 1px solid rgba(220, 230, 246, 0.24);
   border-radius: 50%;
   object-fit: cover;
 }
@@ -1783,7 +1837,7 @@ button {
 .footer-name {
   font-size: 22px;
   font-weight: 600;
-  letter-spacing: -.6px;
+  letter-spacing: -0.6px;
 }
 
 .footer-small {
@@ -1805,16 +1859,19 @@ button {
   height: 42px;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(220, 230, 246, .24);
+  border: 1px solid rgba(220, 230, 246, 0.24);
   border-radius: 50%;
   color: #e3eaf4;
   text-decoration: none;
-  transition: color .2s ease, background .2s ease, border-color .2s ease;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .footer-links a:hover {
   border-color: var(--accent);
-  background: rgba(102, 131, 181, .2);
+  background: rgba(102, 131, 181, 0.2);
   color: #c2d1f1;
 }
 
@@ -1835,11 +1892,11 @@ button {
   justify-content: space-between;
   gap: 12px;
   padding-top: 17px;
-  border-top: 1px solid rgba(220, 230, 246, .14);
+  border-top: 1px solid rgba(220, 230, 246, 0.14);
   color: #b3bdcc;
   font-size: 12px;
   font-weight: 450;
-  letter-spacing: .1px;
+  letter-spacing: 0.1px;
 }
 
 .footer-bottom a {
@@ -1879,7 +1936,7 @@ button {
   }
 
   .hero {
-    grid-template-columns: 1.05fr .95fr;
+    grid-template-columns: 1.05fr 0.95fr;
     align-items: center;
     gap: 28px;
     min-height: 530px;
@@ -1905,7 +1962,7 @@ button {
     width: 1px;
     height: 30px;
     display: block;
-    background: rgba(227, 235, 223, .2);
+    background: rgba(227, 235, 223, 0.2);
   }
 
   .proof-location {
@@ -1970,7 +2027,7 @@ button {
   }
 
   .project-layout {
-    grid-template-columns: minmax(180px, .68fr) minmax(0, 1.32fr);
+    grid-template-columns: minmax(180px, 0.68fr) minmax(0, 1.32fr);
     gap: 19px;
     align-items: start;
   }
@@ -2146,7 +2203,7 @@ button {
 @media (min-width: 960px) {
   .hero {
     min-height: 615px;
-    grid-template-columns: 1fr .86fr;
+    grid-template-columns: 1fr 0.86fr;
     gap: 70px;
     padding-top: 75px;
     padding-bottom: 95px;
@@ -2174,7 +2231,7 @@ button {
   }
 
   .about-grid {
-    grid-template-columns: 1.05fr .95fr;
+    grid-template-columns: 1.05fr 0.95fr;
     gap: 90px;
   }
 
@@ -2191,7 +2248,7 @@ button {
   }
 
   .project-layout {
-    grid-template-columns: minmax(235px, .72fr) minmax(0, 1.28fr);
+    grid-template-columns: minmax(235px, 0.72fr) minmax(0, 1.28fr);
     gap: 35px;
   }
 
@@ -2263,7 +2320,7 @@ button {
 
 @media (min-width: 960px) {
   .brand-name {
-    font-size: clamp(13px, .9vw, 15px);
+    font-size: clamp(13px, 0.9vw, 15px);
   }
 
   .eyebrow,
@@ -2274,7 +2331,7 @@ button {
   .timeline-date,
   .detail-number,
   .education-years {
-    font-size: clamp(12px, .78vw, 13px);
+    font-size: clamp(12px, 0.78vw, 13px);
   }
 
   .hero-intro,
@@ -2290,19 +2347,19 @@ button {
   .button,
   .text-link,
   .inline-link {
-    font-size: clamp(12px, .88vw, 15px);
+    font-size: clamp(12px, 0.88vw, 15px);
   }
 
   .hero-stack span,
   .project-chips span,
   .timeline-tags span,
   .skill-list span {
-    font-size: clamp(12px, .76vw, 13px);
+    font-size: clamp(12px, 0.76vw, 13px);
   }
 
   .proof-label,
   .proof-location {
-    font-size: clamp(12px, .82vw, 14px);
+    font-size: clamp(12px, 0.82vw, 14px);
   }
 
   .timeline-title h3 {
@@ -2311,7 +2368,7 @@ button {
 
   .timeline-title p,
   .timeline-location {
-    font-size: clamp(13px, .9vw, 15px);
+    font-size: clamp(13px, 0.9vw, 15px);
   }
 
   .skill-card-head h3 {
@@ -2323,7 +2380,7 @@ button {
   }
 
   .education-content > p:last-child {
-    font-size: clamp(13px, .9vw, 15px);
+    font-size: clamp(13px, 0.9vw, 15px);
   }
 
   .footer-name {
@@ -2335,7 +2392,7 @@ button {
   }
 
   .footer-bottom {
-    font-size: clamp(13px, .9vw, 15px);
+    font-size: clamp(13px, 0.9vw, 15px);
   }
 
   .footer-links a {
@@ -2369,13 +2426,13 @@ button {
   .list-row-main small,
   .empty-list,
   .tracker-bottom {
-    font-size: clamp(10px, .7vw, 12px);
+    font-size: clamp(10px, 0.7vw, 12px);
   }
 
   .tracker-heading h4,
   .map-sidebar h5,
   .list-row-main strong {
-    font-size: clamp(12px, .9vw, 14px);
+    font-size: clamp(12px, 0.9vw, 14px);
   }
 
   .tracker-topbar,
@@ -2396,7 +2453,7 @@ button {
   .map-label,
   .map-scale,
   .map-compass {
-    font-size: clamp(8px, .62vw, 10px);
+    font-size: clamp(8px, 0.62vw, 10px);
   }
 
   .tracker-map-layout {

@@ -8,7 +8,10 @@ export default function Home() {
       </Link>
       <section className="home-projects" aria-labelledby="projects-title">
         <h2 id="projects-title">Projects</h2>
-        <Link className="button button-dark portfolio-button" href="/sign-tracker">
+        <Link
+          className="button button-dark portfolio-button"
+          href="/sign-tracker"
+        >
           Sign Tracker <span aria-hidden="true">&rarr;</span>
         </Link>
       </section>
