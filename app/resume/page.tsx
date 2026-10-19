@@ -6,7 +6,6 @@ export const metadata: Metadata = { title: "Resume | Noah Huffman" };
 
 const experience = [
   "Build customer-facing Angular applications used by 500+ waste companies nationwide, with REST APIs behind them.",
-  "Upgraded the Angular application from v13 to v21, adopting standalone components, signals, and control flow.",
   "Modernize dependencies and deprecated patterns to make Angular codebases easier to maintain and safer to upgrade.",
   "Design TypeScript microservices on AWS Lambda and API Gateway, with infrastructure defined in CDK and deployed through CloudFormation.",
   "Build Java backend-for-frontend features, contribute to EventBridge ingestion pipelines, and model DynamoDB access patterns.",
@@ -115,15 +114,11 @@ export default function ResumePage() {
           <span>02</span> / HIGHLIGHTS
         </div>
         <div className="resume-card-grid">
-          {["Project impact", "Technical leadership", "Teamwork"].map(
-            (highlight) => (
-              <article className="resume-content-card" key={highlight}>
-                <p className="resume-card-label">{highlight}</p>
-                <h3>Highlight title</h3>
-                <p>Placeholder for a notable accomplishment and its impact.</p>
-              </article>
-            ),
-          )}
+          <article className="resume-content-card">
+            <p className="resume-card-label">Best Practices</p>
+            <h3>Angular Upgrade</h3>
+            <p>Upgraded our Angular application from v13 to v21, adopting standalone components, signals, and control flow. Instructed fellow developers on best practices and modern syntax.</p>
+          </article>
         </div>
       </section>
       <section
@@ -134,15 +129,12 @@ export default function ResumePage() {
           <span>03</span> / COMMENDATIONS
         </div>
         <div className="resume-card-grid">
-          {["Engineering Manager", "Product Manager"].map((title) => (
-            <article className="resume-content-card" key={title}>
+            <article className="resume-content-card">
               <blockquote>
-                “Placeholder for a commendation recognizing meaningful work
-                and its impact.”
+                “Noah has been an outstanding ARK developer—contributing across the system, quickly learning what’s needed, and reliably delivering. He delivered high-quality work on short notice that earned strong stakeholder praise.”
               </blockquote>
-              <footer>{title}</footer>
+              <footer>Principal Member of Technical Staff</footer>
             </article>
-          ))}
         </div>
       </section>
       <section
