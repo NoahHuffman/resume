@@ -93,6 +93,12 @@ button {
   color: var(--blue-light);
 }
 
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .brand-name {
   font-size: 13px;
   font-weight: 650;
@@ -100,35 +106,17 @@ button {
   white-space: nowrap;
 }
 
-.main-nav {
-  display: flex;
-  align-items: center;
-  gap: clamp(13px, 3vw, 34px);
+.brand-title {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.2;
 }
 
-.main-nav a {
-  color: #4b5563;
-  font-size: 12px;
-  font-weight: 550;
-  text-decoration: none;
-  transition: color .2s ease;
-  white-space: nowrap;
-}
-
-.main-nav a:hover,
 .footer-links a:hover,
 .inline-link:hover {
   color: var(--accent-strong);
 }
 
-.main-nav .nav-contact {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  color: var(--ink);
-}
-
-.nav-contact svg,
 .text-link svg,
 .inline-link svg,
 .footer-links svg,
@@ -1769,6 +1757,21 @@ button {
 
 .footer-identity {
   display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-headshot {
+  width: 120px;
+  height: 120px;
+  flex: 0 0 auto;
+  border: 1px solid rgba(220, 230, 246, .24);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.footer-copy {
+  display: flex;
   flex-direction: column;
   gap: 4px;
 }
@@ -1845,10 +1848,6 @@ button {
 }
 
 @media (max-width: 479px) {
-  .main-nav > a:not(.nav-contact) {
-    display: none;
-  }
-
   .footer-inner {
     grid-template-columns: 1fr;
     gap: 18px;
@@ -1873,10 +1872,6 @@ button {
 
   .brand-name {
     font-size: 14px;
-  }
-
-  .main-nav a {
-    font-size: 12px;
   }
 
   .hero {
@@ -2263,8 +2258,7 @@ button {
 }
 
 @media (min-width: 960px) {
-  .brand-name,
-  .main-nav a {
+  .brand-name {
     font-size: clamp(13px, .9vw, 15px);
   }
 
@@ -2459,7 +2453,6 @@ button {
 
   .eyebrow,
   .section-kicker,
-  .main-nav a,
   .button,
   .text-link,
   .inline-link,
