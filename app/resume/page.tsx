@@ -96,46 +96,78 @@ export default function ResumePage() {
             </div>
           </div>
         </article>
+        <div className="resume-technologies skill-card">
+          <div className="skill-card-head">
+            <h3>Technologies</h3>
+          </div>
+          <div className="skill-list">
+            {skills.map((skill) => (
+              <span key={skill}>{skill}</span>
+            ))}
+          </div>
+        </div>
       </section>
       <section
-        className="skills-section section-pad"
-        aria-label="Skills and education"
+        className="resume-details-section section-wrap section-pad"
+        aria-label="Highlights"
       >
-        <div className="section-wrap">
-          <div className="skills-grid">
-            <div className="skill-card technologies-box">
-              <div className="skill-card-head">
-                <h3>Technologies</h3>
-              </div>
-              <div className="skill-list">
-                {skills.map((skill) => (
-                  <span key={skill}>{skill}</span>
-                ))}
-              </div>
+        <div className="section-kicker">
+          <span>02</span> / HIGHLIGHTS
+        </div>
+        <div className="resume-card-grid">
+          {["Project impact", "Technical leadership", "Teamwork"].map(
+            (highlight) => (
+              <article className="resume-content-card" key={highlight}>
+                <p className="resume-card-label">{highlight}</p>
+                <h3>Highlight title</h3>
+                <p>Placeholder for a notable accomplishment and its impact.</p>
+              </article>
+            ),
+          )}
+        </div>
+      </section>
+      <section
+        className="resume-details-section section-wrap section-pad"
+        aria-label="Commendations"
+      >
+        <div className="section-kicker">
+          <span>03</span> / COMMENDATIONS
+        </div>
+        <div className="resume-card-grid">
+          {["Engineering Manager", "Product Manager"].map((title) => (
+            <article className="resume-content-card" key={title}>
+              <blockquote>
+                “Placeholder for a commendation recognizing meaningful work
+                and its impact.”
+              </blockquote>
+              <footer>{title}</footer>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section
+        className="resume-details-section section-wrap section-pad"
+        aria-label="Education"
+      >
+        <div className="section-kicker">
+          <span>04</span> / EDUCATION
+        </div>
+        <div className="resume-education-box">
+          <div className="education-card">
+            <div className="education-emblem" aria-hidden="true">
+              <Image
+                src={utcLogo}
+                alt=""
+                className="education-emblem-image"
+                width={55}
+                height={55}
+              />
             </div>
-            <div className="skill-card education-box">
-              <div className="skill-card-head">
-                <h3>Education</h3>
-              </div>
-              <div className="education-card">
-                <div className="education-emblem" aria-hidden="true">
-                  <Image
-                    src={utcLogo}
-                    alt=""
-                    className="education-emblem-image"
-                    width={55}
-                    height={55}
-                  />
-                </div>
-                <div className="education-content">
-                  <h3>University of Tennessee at Chattanooga</h3>
-                  <p>
-                    B.S. in Computer Science with a minor in Entrepreneurship
-                  </p>
-                </div>
-                <span className="education-years">2020 &mdash; 2024</span>
-              </div>
+            <div className="education-content">
+              <h3>University of Tennessee at Chattanooga</h3>
+              <p>B.S. in Computer Science with a minor in Entrepreneurship</p>
             </div>
+            <span className="education-years">2020 &mdash; 2024</span>
           </div>
         </div>
       </section>

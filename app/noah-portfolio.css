@@ -1570,29 +1570,12 @@ button {
   margin-bottom: 24px;
 }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "technologies"
-    "education";
-  gap: 9px;
-}
-
 .skill-card {
   min-height: 112px;
   padding: 15px;
   border: 1px solid #d7dee8;
   border-radius: 3px;
   background: #f4f6f9;
-}
-
-.education-box {
-  grid-area: education;
-}
-
-.technologies-box {
-  grid-area: technologies;
 }
 
 .skill-card-head {
@@ -2150,12 +2133,6 @@ button {
     font-size: 15px;
   }
 
-  .skills-grid {
-    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-    grid-template-areas: "education technologies";
-    gap: 12px;
-  }
-
   .skill-card {
     padding: 18px;
   }
@@ -2292,10 +2269,6 @@ button {
   .timeline-body ul {
     column-gap: 42px;
     font-size: 12px;
-  }
-
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .skill-card {
@@ -2535,10 +2508,4 @@ button {
     font-size: 12px;
   }
 
-  .skills-grid {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "technologies"
-      "education";
-  }
 }

@@ -81,6 +81,66 @@ body > main {
   line-height: 1.8;
 }
 
+.resume-technologies {
+  margin-top: 24px;
+}
+
+.resume-education-box {
+  min-height: 112px;
+  padding: 15px;
+  border: 1px solid #d7dee8;
+  border-radius: 3px;
+  background: #f4f6f9;
+}
+
+.resume-details-section .section-kicker {
+  margin-bottom: 24px;
+}
+
+.resume-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
+  gap: 9px;
+}
+
+.resume-content-card {
+  min-height: 130px;
+  padding: 18px;
+  border: 1px solid #d7dee8;
+  border-radius: 3px;
+  background: #f4f6f9;
+}
+
+.resume-content-card h3 {
+  margin: 7px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.resume-content-card p,
+.resume-content-card blockquote {
+  margin: 0;
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.resume-content-card .resume-card-label {
+  color: #627da9;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.resume-content-card footer {
+  margin-top: 18px;
+  padding-top: 11px;
+  border-top: 1px solid #d7dee8;
+  color: #4b5563;
+  font-size: 12px;
+  font-weight: 600;
+}
+
 .asset-status {
   margin: 14px 0 0;
   color: var(--muted);
