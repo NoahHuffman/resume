@@ -129,12 +129,17 @@ export default function ResumePage() {
           <span>03</span> / COMMENDATIONS
         </div>
         <div className="resume-card-grid">
-            <article className="resume-content-card">
-              <blockquote>
-                “Noah has been an outstanding ARK developer—contributing across the system, quickly learning what’s needed, and reliably delivering. He delivered high-quality work on short notice that earned strong stakeholder praise.”
-              </blockquote>
-              <footer>Principal Member of Technical Staff</footer>
-            </article>
+          <article className="resume-content-card">
+            <blockquote>
+              “Noah has been an outstanding ARK developer—contributing across the system, quickly learning what’s needed, and reliably delivering. He delivered high-quality work on short notice that earned strong stakeholder praise.”
+            </blockquote>
+            <footer className="resume-commendation-footer">
+              <span className="resume-commendation-title">
+                - Principal Member of Technical Staff
+              </span>
+              <span className="resume-commendation-company">Environmental Solutions Group</span>
+            </footer>
+          </article>
         </div>
       </section>
       <section

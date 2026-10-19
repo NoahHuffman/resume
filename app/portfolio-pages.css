@@ -141,6 +141,24 @@ body > main {
   font-weight: 600;
 }
 
+.resume-commendation-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.resume-commendation-title {
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.resume-commendation-company {
+  color: #6b7280;
+  font-size: 11px;
+  font-weight: 400;
+}
+
 .asset-status {
   margin: 14px 0 0;
   color: var(--muted);
