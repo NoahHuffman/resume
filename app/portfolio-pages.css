@@ -73,6 +73,14 @@ body > main {
   padding-top: 64px;
 }
 
+.resume-bio {
+  max-width: 620px;
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
 .asset-status {
   margin: 14px 0 0;
   color: var(--muted);

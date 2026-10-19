@@ -1521,6 +1521,9 @@ button {
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-areas:
+    "technologies"
+    "education";
   gap: 9px;
 }
 
@@ -1530,6 +1533,14 @@ button {
   border: 1px solid #d7dee8;
   border-radius: 3px;
   background: #f4f6f9;
+}
+
+.education-box {
+  grid-area: education;
+}
+
+.technologies-box {
+  grid-area: technologies;
 }
 
 .skill-card-head {
@@ -1559,31 +1570,24 @@ button {
 .skill-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 10px 12px;
 }
 
 .skill-list span {
   padding: 5px 7px;
-  border-radius: 2px;
+  border-radius: 999px;
+  min-width: 50px;
+  text-align: center;
   background: #e7ecf4;
   color: #536174;
   font-size: 12px;
-}
-
-.education-section {
-  padding-top: 66px;
-  padding-bottom: 70px;
+  font-weight: 500;
 }
 
 .education-card {
   display: flex;
   align-items: center;
   gap: 13px;
-  margin-top: 22px;
-  padding: 19px 15px;
-  border: 1px solid #d7dee8;
-  border-radius: 3px;
-  background: #f4f6f9;
 }
 
 .education-emblem {
@@ -2090,7 +2094,8 @@ button {
   }
 
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    grid-template-areas: "education technologies";
     gap: 12px;
   }
 
@@ -2104,7 +2109,6 @@ button {
 
   .education-card {
     gap: 19px;
-    padding: 23px;
   }
 
   .education-emblem {
@@ -2476,5 +2480,8 @@ button {
 
   .skills-grid {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "technologies"
+      "education";
   }
 }
