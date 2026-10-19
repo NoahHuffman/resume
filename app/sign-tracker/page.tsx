@@ -24,11 +24,11 @@ export default function SignTrackerPage() {
         <h2 id="demo-title">App demo</h2>
         <div className="phone-frame">
           <div className="phone-camera" aria-hidden="true" />
-          <video className="phone-video" controls playsInline preload="none" aria-label="Sign Tracker app demo">
+          <video className="phone-video" src={"/sign-tracker-demo.mp4"} controls playsInline preload="none" aria-label="Sign Tracker app demo">
             Your browser does not support video playback.
           </video>
         </div>
-        <p className="asset-status">Demo video coming soon.</p>
+        {/* <p className="asset-status">Demo video coming soon.</p> */}
       </section>
     </main>
   );
