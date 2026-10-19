@@ -117,7 +117,11 @@ export default function ResumePage() {
           <article className="resume-content-card">
             <p className="resume-card-label">Best Practices</p>
             <h3>Angular Upgrade</h3>
-            <p>Upgraded our Angular application from v13 to v21, adopting standalone components, signals, and control flow. Instructed fellow developers on best practices and modern syntax.</p>
+            <p>
+              Upgraded our Angular application from v13 to v21, adopting
+              standalone components, signals, and control flow. Instructed
+              fellow developers on best practices and modern syntax.
+            </p>
           </article>
         </div>
       </section>
@@ -131,13 +135,18 @@ export default function ResumePage() {
         <div className="resume-card-grid">
           <article className="resume-content-card">
             <blockquote>
-              “Noah has been an outstanding ARK developer—contributing across the system, quickly learning what’s needed, and reliably delivering. He delivered high-quality work on short notice that earned strong stakeholder praise.”
+              “Noah has been an outstanding ARK developer—contributing across
+              the system, quickly learning what’s needed, and reliably
+              delivering. He delivered high-quality work on short notice that
+              earned strong stakeholder praise.”
             </blockquote>
             <footer className="resume-commendation-footer">
               <span className="resume-commendation-title">
                 - Principal Member of Technical Staff
               </span>
-              <span className="resume-commendation-company">Environmental Solutions Group</span>
+              <span className="resume-commendation-company">
+                Environmental Solutions Group
+              </span>
             </footer>
           </article>
         </div>
