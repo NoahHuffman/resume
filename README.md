@@ -33,7 +33,3 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000).
 
 Live site: [https://huffmansoftware.com](https://huffmansoftware.com)
-
-## TODO
-
-- [ ] Create a new sign tracker demo and replace the outdated `public/sign-tracker-demo.mp4` with it.
