@@ -1,0 +1,10 @@
+@use "../stylesheets/breakpoints" as *;
+@use "../stylesheets/colours" as *;
+@use "../stylesheets/layout" as *;
+
+.resume-page {
+  &_heading {
+    @include section-wrap;
+    padding-top: 4rem;
+  }
+}

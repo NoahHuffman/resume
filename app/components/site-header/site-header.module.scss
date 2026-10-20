@@ -1,0 +1,61 @@
+@use "../../stylesheets/breakpoints" as *;
+@use "../../stylesheets/colours" as *;
+@use "../../stylesheets/layout" as *;
+
+.site-header {
+  @include section-wrap;
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $line;
+
+  @include app-breakpoint-up(sm) {
+    min-height: 82px;
+  }
+
+  &_brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    text-decoration: none;
+  }
+
+  &_mark {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: $navy;
+    color: $white;
+    font-size: 12px;
+    font-weight: 700;
+
+    span {
+      color: $blue-light;
+    }
+  }
+
+  &_copy {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
+  &_name {
+    font-size: 13px;
+    font-weight: 650;
+    white-space: nowrap;
+
+    @include app-breakpoint-up(sm) {
+      font-size: 14px;
+    }
+  }
+
+  &_title {
+    color: $muted;
+    font-size: 11px;
+    line-height: 1.2;
+  }
+}

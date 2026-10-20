@@ -1,0 +1,33 @@
+@use "../../stylesheets/breakpoints" as *;
+@use "../../stylesheets/colours" as *;
+
+.page-heading {
+  &_eyebrow {
+    margin: 0;
+    color: $muted;
+    font-size: 12px;
+    font-weight: 650;
+    line-height: 1.7;
+    text-transform: uppercase;
+  }
+
+  &_title {
+    margin: 1.125rem 0;
+    font-size: 48px;
+    font-weight: 550;
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+  }
+
+  &_description {
+    max-width: 620px;
+    margin: 0;
+    color: $muted;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  &_details {
+    margin-top: 1.75rem;
+  }
+}

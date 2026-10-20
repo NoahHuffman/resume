@@ -1,0 +1,16 @@
+@use "../../stylesheets/breakpoints" as *;
+@use "../../stylesheets/colours" as *;
+
+.skip-link {
+  position: absolute;
+  z-index: 10;
+  top: 8px;
+  left: 8px;
+  padding: 0.75rem;
+  background: $white;
+  transform: translateY(-150%);
+
+  &:focus {
+    transform: translateY(0);
+  }
+}

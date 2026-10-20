@@ -1,0 +1,16 @@
+@use "../stylesheets/breakpoints" as *;
+@use "../stylesheets/colours" as *;
+@use "../stylesheets/layout" as *;
+
+.sign-tracker-page {
+  @include section-wrap;
+  display: grid;
+  align-items: start;
+  gap: 3rem;
+  padding-block: 4rem 5rem;
+
+  @include app-breakpoint-up(md) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 4rem;
+  }
+}
