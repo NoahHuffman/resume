@@ -87,7 +87,7 @@ export default function ResumePage() {
               ))}
             </ul>
             <div className="timeline-tags">
-              {["Angular", "TypeScript", "AWS", "Java", "DynamoDB"].map(
+              {["Angular", "TypeScript", "AWS", "Java"].map(
                 (skill) => (
                   <span key={skill}>{skill}</span>
                 ),

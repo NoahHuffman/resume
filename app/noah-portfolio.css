@@ -1491,8 +1491,10 @@ button {
   display: grid;
   grid-template-columns: 1fr;
   gap: 13px;
-  padding: 20px 0 24px;
-  border-top: 1px solid #d9ddd5;
+  padding: 20px 16px 24px;
+  border: 1px solid #d7dee8;
+  border-radius: 3px;
+  background: #f4f6f9;
 }
 
 .timeline-date {
@@ -1540,14 +1542,16 @@ button {
   font-size: 12px;
 }
 
-.timeline-body ul {
-  display: grid;
-  gap: 8px;
-  margin: 17px 0;
-  padding-left: 14px;
+.timeline-entry .timeline-body ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 10px 0;
+  padding-left: 16px;
+  list-style: disc;
   color: #4b5563;
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .timeline-body li {
@@ -2114,7 +2118,7 @@ button {
   .timeline-entry {
     grid-template-columns: 150px 1fr;
     gap: 25px;
-    padding: 25px 0 30px;
+    padding: 25px 18px 30px;
   }
 
   .timeline-title {
@@ -2128,8 +2132,6 @@ button {
   }
 
   .timeline-body ul {
-    grid-template-columns: 1fr 1fr;
-    column-gap: 25px;
     font-size: 15px;
   }
 
@@ -2267,7 +2269,6 @@ button {
   }
 
   .timeline-body ul {
-    column-gap: 42px;
     font-size: 12px;
   }
 

@@ -93,6 +93,7 @@ body > main {
   background: #f4f6f9;
 }
 
+.experience-section .section-kicker,
 .resume-details-section .section-kicker {
   margin-bottom: 24px;
 }
