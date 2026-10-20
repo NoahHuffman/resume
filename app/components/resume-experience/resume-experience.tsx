@@ -21,7 +21,7 @@ export default function ResumeExperience() {
           <div>
             <h3 className={styles["resume-experience_company"]}>Environmental Solutions Group</h3>
             <p className={styles["resume-experience_role"]}>
-              Terex company <span>&middot;</span> Software Engineer II, promoted March 2026
+              Software Engineer II, promoted March 2026
             </p>
           </div>
           <span className={styles["resume-experience_location"]}>Chattanooga, TN</span>
