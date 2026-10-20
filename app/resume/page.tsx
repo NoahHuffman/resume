@@ -47,11 +47,26 @@ const skills = [
   "Jenkins",
 ];
 
+type SectionHeadingProps = {
+  id: string;
+  number: string;
+  title: string;
+};
+
+function SectionHeading({ id, number, title }: SectionHeadingProps) {
+  return (
+    <h2 id={id} className="section-kicker">
+      <span>{number}</span> / {title}
+    </h2>
+  );
+}
+
 export default function ResumePage() {
   return (
     <main id="top" className="resume-page">
       <div className="page-heading section-wrap">
         <p className="eyebrow">Noah Huffman / Software Engineer II</p>
+        <h1>Resume</h1>
         <p className="resume-bio">
           I&apos;m a full-stack software engineer in Chattanooga, building
           Angular applications and AWS services for a platform used by 500+
@@ -60,11 +75,9 @@ export default function ResumePage() {
       </div>
       <section
         className="experience-section section-wrap section-pad"
-        aria-label="Experience"
+        aria-labelledby="experience-heading"
       >
-        <div className="section-kicker">
-          <span>01</span> / EXPERIENCE
-        </div>
+        <SectionHeading id="experience-heading" number="01" title="EXPERIENCE" />
         <article className="timeline-entry">
           <div className="timeline-date">
             <span className="timeline-dot" />
@@ -108,11 +121,9 @@ export default function ResumePage() {
       </section>
       <section
         className="resume-details-section section-wrap section-pad"
-        aria-label="Highlights"
+        aria-labelledby="highlights-heading"
       >
-        <div className="section-kicker">
-          <span>02</span> / HIGHLIGHTS
-        </div>
+        <SectionHeading id="highlights-heading" number="02" title="HIGHLIGHTS" />
         <div className="resume-card-grid">
           <article className="resume-content-card">
             <p className="resume-card-label">Best Practices</p>
@@ -127,11 +138,9 @@ export default function ResumePage() {
       </section>
       <section
         className="resume-details-section section-wrap section-pad"
-        aria-label="Commendations"
+        aria-labelledby="commendations-heading"
       >
-        <div className="section-kicker">
-          <span>03</span> / COMMENDATIONS
-        </div>
+        <SectionHeading id="commendations-heading" number="03" title="COMMENDATIONS" />
         <div className="resume-card-grid">
           <article className="resume-content-card">
             <blockquote>
@@ -153,11 +162,9 @@ export default function ResumePage() {
       </section>
       <section
         className="resume-details-section section-wrap section-pad"
-        aria-label="Education"
+        aria-labelledby="education-heading"
       >
-        <div className="section-kicker">
-          <span>04</span> / EDUCATION
-        </div>
+        <SectionHeading id="education-heading" number="04" title="EDUCATION" />
         <div className="resume-education-box">
           <div className="education-card">
             <div className="education-emblem" aria-hidden="true">

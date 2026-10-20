@@ -16,22 +16,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteDescription =
+  "Noah Huffman is a full-stack software engineer in Chattanooga, TN. Angular, TypeScript, and AWS. Builds a fleet management platform used by 500+ waste companies.";
+
 export const metadata: Metadata = {
   title: "Noah Huffman | Software Engineer",
-  description:
-    "Noah Huffman is a full-stack software engineer in Chattanooga, TN. Angular, TypeScript, and AWS. Builds a fleet management platform used by 500+ waste companies.",
+  description: siteDescription,
   metadataBase: new URL("https://huffmansoftware.com"),
   openGraph: {
     title: "Noah Huffman | Software Engineer",
-    description:
-      "Noah Huffman is a full-stack software engineer in Chattanooga, TN. Angular, TypeScript, and AWS. Builds a fleet management platform used by 500+ waste companies.",
+    description: siteDescription,
     type: "website",
   },
   twitter: {
     card: "summary",
     title: "Noah Huffman | Software Engineer",
-    description:
-      "Noah Huffman is a full-stack software engineer in Chattanooga, TN. Angular, TypeScript, and AWS. Builds a fleet management platform used by 500+ waste companies.",
+    description: siteDescription,
   },
 };
 
@@ -50,10 +50,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <span className="brand-mark">
               N<span>H</span>
             </span>
-            <span
-              className="brand-copy"
-              style={{ display: "flex", flexDirection: "column", gap: 2 }}
-            >
+            <span className="brand-copy">
               <span className="brand-name">Noah Huffman</span>
               <span className="brand-title">Software Engineer</span>
             </span>
@@ -62,29 +59,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {children}
         <footer className="site-footer">
           <div className="footer-inner">
-            <div
-              className="footer-identity"
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                gap: 14,
-              }}
-            >
+            <div className="footer-identity">
               <Image
                 className="footer-headshot"
                 src={headshot}
                 alt=""
-                style={{
-                  flex: "0 0 auto",
-                  borderRadius: "50%",
-                  objectFit: "cover",
-                }}
               />
-              <div
-                className="footer-copy"
-                style={{ display: "flex", flexDirection: "column", gap: 4 }}
-              >
+              <div className="footer-copy">
                 <span className="footer-name">Noah Huffman</span>
                 <span className="footer-small">Software Engineer</span>
               </div>

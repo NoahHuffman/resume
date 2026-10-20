@@ -31,7 +31,6 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: Arial, Helvetica, sans-serif;
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -428,8 +427,7 @@ button {
   object-fit: cover;
 }
 
-.about-grid h2,
-.education-content h2 {
+.about-grid h2 {
   margin: 0;
   font-size: clamp(28px, 7vw, 42px);
   font-weight: 500;
@@ -1542,7 +1540,7 @@ button {
   font-size: 12px;
 }
 
-.timeline-entry .timeline-body ul {
+.timeline-body ul {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -1671,12 +1669,6 @@ button {
   letter-spacing: 0.7px;
 }
 
-.education-content h2 {
-  font-size: 15px;
-  letter-spacing: -0.4px;
-  line-height: 1.25;
-}
-
 .education-content > p:last-child {
   margin: 5px 0 0;
   color: #4b5563;
@@ -1776,14 +1768,6 @@ button {
 
 .button-outline:hover {
   background: rgba(220, 230, 246, 0.12);
-}
-
-.resume-note {
-  position: relative;
-  z-index: 1;
-  margin: 7px 0 0;
-  color: #d0d8e6;
-  font-size: 12px;
 }
 
 .site-footer {
@@ -2152,10 +2136,6 @@ button {
     height: 55px;
   }
 
-  .education-content h2 {
-    font-size: 19px;
-  }
-
   .contact-section {
     width: min(100% - 4rem, 1160px);
     padding: 76px 50px;
@@ -2235,10 +2215,6 @@ button {
     font-size: 40px;
   }
 
-  .project-description {
-    font-size: 11px;
-  }
-
   .tracker-map-layout {
     grid-template-columns: minmax(0, 1fr) 164px;
   }
@@ -2268,10 +2244,6 @@ button {
     gap: 35px;
   }
 
-  .timeline-body ul {
-    font-size: 12px;
-  }
-
   .skill-card {
     min-height: 138px;
     padding: 19px;
@@ -2290,9 +2262,7 @@ button {
     right: 70px;
     font-size: 30px;
   }
-}
 
-@media (min-width: 960px) {
   .brand-name {
     font-size: clamp(13px, 0.9vw, 15px);
   }
@@ -2347,10 +2317,6 @@ button {
 
   .skill-card-head h3 {
     font-size: clamp(15px, 1vw, 17px);
-  }
-
-  .education-content h2 {
-    font-size: clamp(21px, 1.5vw, 26px);
   }
 
   .education-content > p:last-child {

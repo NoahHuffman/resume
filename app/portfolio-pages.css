@@ -85,12 +85,16 @@ body > main {
   margin-top: 24px;
 }
 
-.resume-education-box {
-  min-height: 112px;
-  padding: 15px;
+.resume-education-box,
+.resume-content-card {
   border: 1px solid #d7dee8;
   border-radius: 3px;
   background: #f4f6f9;
+}
+
+.resume-education-box {
+  min-height: 112px;
+  padding: 15px;
 }
 
 .experience-section .section-kicker,
@@ -107,9 +111,6 @@ body > main {
 .resume-content-card {
   min-height: 130px;
   padding: 18px;
-  border: 1px solid #d7dee8;
-  border-radius: 3px;
-  background: #f4f6f9;
 }
 
 .resume-content-card h3 {
@@ -160,12 +161,6 @@ body > main {
   font-weight: 400;
 }
 
-.asset-status {
-  margin: 14px 0 0;
-  color: var(--muted);
-  font-size: 13px;
-}
-
 .resume-page .education-card {
   flex-wrap: wrap;
 }
@@ -174,7 +169,7 @@ body > main {
   flex-basis: 200px;
 }
 
-.education-content h3 {
+.resume-page .education-content h3 {
   margin: 0;
   font-size: 20px;
   font-weight: 550;
