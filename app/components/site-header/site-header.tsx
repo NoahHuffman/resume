@@ -4,7 +4,11 @@ import styles from "./site-header.module.scss";
 export default function SiteHeader() {
   return (
     <header className={styles["site-header"]}>
-      <Link className={styles["site-header_brand"]} href="/" aria-label="Noah Huffman, home">
+      <Link
+        className={styles["site-header_brand"]}
+        href="/"
+        aria-label="Noah Huffman, home"
+      >
         <span className={styles["site-header_mark"]}>
           N<span>H</span>
         </span>

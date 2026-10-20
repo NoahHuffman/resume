@@ -1,6 +1,6 @@
-@use '../stylesheets/breakpoints' as *;
-@use '../stylesheets/colours' as *;
-@use '../stylesheets/layout' as *;
+@use "../stylesheets/breakpoints" as *;
+@use "../stylesheets/colours" as *;
+@use "../stylesheets/layout" as *;
 
 .portfolio-home {
   @include section-wrap;

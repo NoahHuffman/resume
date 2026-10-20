@@ -19,7 +19,10 @@ export default function SignTrackerPage() {
         title="Sign Tracker"
         description="I built this mobile app for a junk removal crew to track their signs on a shared map. The crew can add locations and photos, group signs by job, share real-time updates, and order stops for a route."
       >
-        <TagList items={["React Native", "Expo", "Firebase", "Google Maps API"]} label="Technologies" />
+        <TagList
+          items={["React Native", "Expo", "Firebase", "Google Maps API"]}
+          label="Technologies"
+        />
       </PageHeading>
       <AppDemo />
     </main>

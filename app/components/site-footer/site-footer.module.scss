@@ -1,6 +1,6 @@
-@use '../../stylesheets/breakpoints' as *;
-@use '../../stylesheets/colours' as *;
-@use '../../stylesheets/layout' as *;
+@use "../../stylesheets/breakpoints" as *;
+@use "../../stylesheets/colours" as *;
+@use "../../stylesheets/layout" as *;
 
 .site-footer {
   background: $footer-background;
@@ -83,7 +83,10 @@
       border-radius: 50%;
       color: $footer-link;
       text-decoration: none;
-      transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+      transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
 
       &:hover {
         border-color: $accent;

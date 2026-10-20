@@ -28,18 +28,27 @@ export default function ResumePage() {
         <ResumeCard label="Best Practices" title="Angular Upgrade">
           <p>
             Upgraded our Angular application from v13 to v21, adopting
-            standalone components, signals, and control flow. Instructed
-            fellow developers on best practices and modern syntax.
+            standalone components, signals, and control flow. Instructed fellow
+            developers on best practices and modern syntax.
           </p>
         </ResumeCard>
       </ResumeSection>
-      <ResumeSection id="commendations-heading" number="03" title="COMMENDATIONS">
-        <ResumeCard author={{ title: "Principal Member of Technical Staff", company: "Environmental Solutions Group" }}>
+      <ResumeSection
+        id="commendations-heading"
+        number="03"
+        title="COMMENDATIONS"
+      >
+        <ResumeCard
+          author={{
+            title: "Principal Member of Technical Staff",
+            company: "Environmental Solutions Group",
+          }}
+        >
           <blockquote>
-            “Noah has been an outstanding ARK developer—contributing across
-            the system, quickly learning what’s needed, and reliably
-            delivering. He delivered high-quality work on short notice that
-            earned strong stakeholder praise.”
+            “Noah has been an outstanding ARK developer—contributing across the
+            system, quickly learning what’s needed, and reliably delivering. He
+            delivered high-quality work on short notice that earned strong
+            stakeholder praise.”
           </blockquote>
         </ResumeCard>
       </ResumeSection>

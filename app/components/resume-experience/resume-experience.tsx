@@ -19,17 +19,26 @@ export default function ResumeExperience() {
       <div>
         <div className={styles["resume-experience_heading"]}>
           <div>
-            <h3 className={styles["resume-experience_company"]}>Environmental Solutions Group</h3>
+            <h3 className={styles["resume-experience_company"]}>
+              Environmental Solutions Group
+            </h3>
             <p className={styles["resume-experience_role"]}>
               Software Engineer II, promoted March 2026
             </p>
           </div>
-          <span className={styles["resume-experience_location"]}>Chattanooga, TN</span>
+          <span className={styles["resume-experience_location"]}>
+            Chattanooga, TN
+          </span>
         </div>
         <ul className={styles["resume-experience_details"]}>
-          {experience.map((item) => <li key={item}>{item}</li>)}
+          {experience.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
         </ul>
-        <TagList items={["Angular", "TypeScript", "AWS", "Java"]} label="Experience technologies" />
+        <TagList
+          items={["Angular", "TypeScript", "AWS", "Java"]}
+          label="Experience technologies"
+        />
       </div>
     </article>
   );

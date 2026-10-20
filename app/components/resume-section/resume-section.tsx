@@ -17,7 +17,8 @@ export default function ResumeSection({
   return (
     <section className={styles["resume-section"]} aria-labelledby={id}>
       <h2 id={id} className={styles["resume-section_heading"]}>
-        <span className={styles["resume-section_number"]}>{number}</span> / {title}
+        <span className={styles["resume-section_number"]}>{number}</span> /{" "}
+        {title}
       </h2>
       {children}
     </section>

@@ -1,5 +1,5 @@
-@use 'breakpoints' as *;
-@use 'colours' as *;
+@use "breakpoints" as *;
+@use "colours" as *;
 
 @mixin section-wrap {
   width: min(100% - 2.5rem, 1160px);
