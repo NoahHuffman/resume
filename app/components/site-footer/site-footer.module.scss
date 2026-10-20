@@ -1,0 +1,145 @@
+@use '../../stylesheets/breakpoints' as *;
+@use '../../stylesheets/colours' as *;
+@use '../../stylesheets/layout' as *;
+
+.site-footer {
+  background: $footer-background;
+  color: $footer-text;
+
+  &_inner {
+    @include section-wrap;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 1.125rem;
+    padding-block: 2.125rem 1.4375rem;
+
+    @include app-breakpoint-up(sm) {
+      grid-template-columns: 1fr auto;
+      gap: 1.5rem;
+      padding-block: 2.375rem 1.375rem;
+    }
+  }
+
+  &_identity {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    min-width: 0;
+  }
+
+  &_headshot {
+    width: 120px;
+    height: 120px;
+    flex: 0 0 auto;
+    border: 1px solid $footer-border;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &_copy {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 0;
+  }
+
+  &_name {
+    font-size: 22px;
+    font-weight: 600;
+
+    @include app-breakpoint-up(lg) {
+      font-size: 28px;
+    }
+  }
+
+  &_title {
+    color: $footer-secondary;
+    font-size: 13px;
+    font-weight: 450;
+
+    @include app-breakpoint-up(lg) {
+      font-size: 16px;
+    }
+  }
+
+  &_links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: start;
+    gap: 0.625rem;
+
+    @include app-breakpoint-up(sm) {
+      justify-self: end;
+      gap: 0.75rem;
+    }
+
+    a {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 1px solid $footer-border;
+      border-radius: 50%;
+      color: $footer-link;
+      text-decoration: none;
+      transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+
+      &:hover {
+        border-color: $accent;
+        background: $footer-link-hover;
+        color: $blue-light;
+      }
+
+      &:focus-visible {
+        outline: 2px solid $focus-ring;
+        outline-offset: 3px;
+      }
+
+      @include app-breakpoint-up(lg) {
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+    svg {
+      width: 19px;
+      height: 19px;
+
+      @include app-breakpoint-up(lg) {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+
+  &_bottom {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding-top: 1.0625rem;
+    border-top: 1px solid $footer-rule;
+    color: $footer-bottom;
+    font-size: 12px;
+    font-weight: 450;
+
+    @include app-breakpoint-up(sm) {
+      padding-top: 0.75rem;
+    }
+
+    @include app-breakpoint-up(lg) {
+      font-size: 14px;
+    }
+
+    a {
+      color: $footer-top-link;
+      text-decoration: none;
+
+      &:hover {
+        color: $blue-light;
+      }
+    }
+  }
+}

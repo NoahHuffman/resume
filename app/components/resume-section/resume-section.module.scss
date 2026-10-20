@@ -1,0 +1,29 @@
+@use '../../stylesheets/breakpoints' as *;
+@use '../../stylesheets/colours' as *;
+@use '../../stylesheets/layout' as *;
+
+.resume-section {
+  @include section-wrap;
+  padding-block: 4.75rem;
+
+  @include app-breakpoint-up(sm) {
+    padding-block: 5.875rem;
+  }
+
+  &_heading {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    margin: 0 0 1.5rem;
+    color: $muted;
+    font-size: 12px;
+    font-weight: 650;
+    text-transform: uppercase;
+  }
+
+  &_number {
+    color: $accent-strong;
+    font-family: var(--font-geist-mono), monospace;
+    font-size: 12px;
+  }
+}

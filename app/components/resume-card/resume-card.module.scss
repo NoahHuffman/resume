@@ -1,0 +1,57 @@
+@use '../../stylesheets/breakpoints' as *;
+@use '../../stylesheets/colours' as *;
+
+.resume-card {
+  min-height: 130px;
+  padding: 1.125rem;
+  border: 1px solid $card-border;
+  border-radius: 3px;
+  background: $paper;
+
+  &_label {
+    margin: 0;
+    color: $accent-strong;
+    font-family: var(--font-geist-mono), monospace;
+    font-size: 11px;
+    line-height: 1.65;
+    text-transform: uppercase;
+  }
+
+  &_title {
+    margin: 0.4375rem 0;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &_content {
+    color: $muted;
+    font-size: 14px;
+    line-height: 1.65;
+
+    p,
+    blockquote {
+      margin: 0;
+    }
+  }
+
+  &_author {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1875rem;
+    margin-top: 1.125rem;
+    padding-top: 0.6875rem;
+    border-top: 1px solid $card-border;
+
+    &_title {
+      color: $commendation-title;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    &_company {
+      color: $commendation-company;
+      font-size: 11px;
+      font-weight: 400;
+    }
+  }
+}

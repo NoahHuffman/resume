@@ -1,19 +1,13 @@
-import Link from "next/link";
+import ProjectLink from "../components/project-link/project-link";
+import styles from "./page.module.scss";
 
 export default function Home() {
   return (
-    <main id="top" className="portfolio-home section-wrap">
-      <Link className="button button-dark portfolio-button" href="/resume">
-        Resume <span aria-hidden="true">&rarr;</span>
-      </Link>
-      <section className="home-projects" aria-labelledby="projects-title">
-        <h2 id="projects-title">Projects</h2>
-        <Link
-          className="button button-dark portfolio-button"
-          href="/sign-tracker"
-        >
-          Sign Tracker <span aria-hidden="true">&rarr;</span>
-        </Link>
+    <main id="top" className={styles["portfolio-home"]}>
+      <ProjectLink href="/resume">Resume</ProjectLink>
+      <section className={styles["portfolio-home_projects"]} aria-labelledby="projects-title">
+        <h2 id="projects-title" className={styles["portfolio-home_title"]}>Projects</h2>
+        <ProjectLink href="/sign-tracker">Sign Tracker</ProjectLink>
       </section>
     </main>
   );

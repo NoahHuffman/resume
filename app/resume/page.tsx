@@ -1,189 +1,51 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import utcLogo from "../assets/utc-logo.jpg";
+import PageHeading from "../components/page-heading/page-heading";
+import ResumeSection from "../components/resume-section/resume-section";
+import ResumeExperience from "../components/resume-experience/resume-experience";
+import Technologies from "../components/technologies/technologies";
+import ResumeCard from "../components/resume-card/resume-card";
+import ResumeEducation from "../components/resume-education/resume-education";
+import styles from "./page.module.scss";
 
 export const metadata: Metadata = { title: "Resume | Noah Huffman" };
 
-const experience = [
-  "Build customer-facing Angular applications used by 500+ waste companies nationwide, with REST APIs behind them.",
-  "Modernize dependencies and deprecated patterns to make Angular codebases easier to maintain and safer to upgrade.",
-  "Design TypeScript microservices on AWS Lambda and API Gateway, with infrastructure defined in CDK and deployed through CloudFormation.",
-  "Build Java backend-for-frontend features, contribute to EventBridge ingestion pipelines, and model DynamoDB access patterns.",
-  "Partner with product, QA, and engineering, and review code.",
-];
-
-const skills = [
-  "Angular",
-  "TypeScript",
-  "JavaScript",
-  "Node.js",
-  "RxJS",
-  "AWS",
-  "Lambda",
-  "API Gateway",
-  "EventBridge",
-  "DynamoDB",
-  "CDK",
-  "Java",
-  "Spring",
-  "React",
-  "React Native",
-  "Expo",
-  "Firebase",
-  "Google Maps API",
-  "Next.js",
-  "PostgreSQL",
-  "Python",
-  "Android",
-  "MySQL",
-  "OpenSearch",
-  "Docker",
-  "JIRA",
-  "Confluence",
-  "Agile",
-  "Git",
-  "GitHub",
-  "GitLab",
-  "Jenkins",
-];
-
-type SectionHeadingProps = {
-  id: string;
-  number: string;
-  title: string;
-};
-
-function SectionHeading({ id, number, title }: SectionHeadingProps) {
-  return (
-    <h2 id={id} className="section-kicker">
-      <span>{number}</span> / {title}
-    </h2>
-  );
-}
-
 export default function ResumePage() {
   return (
-    <main id="top" className="resume-page">
-      <div className="page-heading section-wrap">
-        <p className="eyebrow">Noah Huffman / Software Engineer II</p>
-        <h1>Resume</h1>
-        <p className="resume-bio">
-          I&apos;m a full-stack software engineer in Chattanooga, building
-          Angular applications and AWS services for a platform used by 500+
-          waste companies.
-        </p>
+    <main id="top">
+      <div className={styles["resume-page_heading"]}>
+        <PageHeading
+          id="resume-title"
+          eyebrow="Noah Huffman / Software Engineer II"
+          title="Resume"
+          description="I'm a full-stack software engineer in Chattanooga, building Angular applications and AWS services for a platform used by 500+ waste companies."
+        />
       </div>
-      <section
-        className="experience-section section-wrap section-pad"
-        aria-labelledby="experience-heading"
-      >
-        <SectionHeading id="experience-heading" number="01" title="EXPERIENCE" />
-        <article className="timeline-entry">
-          <div className="timeline-date">
-            <span className="timeline-dot" />
-            MAR 2023 &mdash; PRESENT
-          </div>
-          <div className="timeline-body">
-            <div className="timeline-title">
-              <div>
-                <h3>Environmental Solutions Group</h3>
-                <p>
-                  Terex company <span>&middot;</span> Software Engineer II,
-                  promoted March 2026
-                </p>
-              </div>
-              <span className="timeline-location">Chattanooga, TN</span>
-            </div>
-            <ul>
-              {experience.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-            <div className="timeline-tags">
-              {["Angular", "TypeScript", "AWS", "Java"].map(
-                (skill) => (
-                  <span key={skill}>{skill}</span>
-                ),
-              )}
-            </div>
-          </div>
-        </article>
-        <div className="resume-technologies skill-card">
-          <div className="skill-card-head">
-            <h3>Technologies</h3>
-          </div>
-          <div className="skill-list">
-            {skills.map((skill) => (
-              <span key={skill}>{skill}</span>
-            ))}
-          </div>
-        </div>
-      </section>
-      <section
-        className="resume-details-section section-wrap section-pad"
-        aria-labelledby="highlights-heading"
-      >
-        <SectionHeading id="highlights-heading" number="02" title="HIGHLIGHTS" />
-        <div className="resume-card-grid">
-          <article className="resume-content-card">
-            <p className="resume-card-label">Best Practices</p>
-            <h3>Angular Upgrade</h3>
-            <p>
-              Upgraded our Angular application from v13 to v21, adopting
-              standalone components, signals, and control flow. Instructed
-              fellow developers on best practices and modern syntax.
-            </p>
-          </article>
-        </div>
-      </section>
-      <section
-        className="resume-details-section section-wrap section-pad"
-        aria-labelledby="commendations-heading"
-      >
-        <SectionHeading id="commendations-heading" number="03" title="COMMENDATIONS" />
-        <div className="resume-card-grid">
-          <article className="resume-content-card">
-            <blockquote>
-              “Noah has been an outstanding ARK developer—contributing across
-              the system, quickly learning what’s needed, and reliably
-              delivering. He delivered high-quality work on short notice that
-              earned strong stakeholder praise.”
-            </blockquote>
-            <footer className="resume-commendation-footer">
-              <span className="resume-commendation-title">
-                - Principal Member of Technical Staff
-              </span>
-              <span className="resume-commendation-company">
-                Environmental Solutions Group
-              </span>
-            </footer>
-          </article>
-        </div>
-      </section>
-      <section
-        className="resume-details-section section-wrap section-pad"
-        aria-labelledby="education-heading"
-      >
-        <SectionHeading id="education-heading" number="04" title="EDUCATION" />
-        <div className="resume-education-box">
-          <div className="education-card">
-            <div className="education-emblem" aria-hidden="true">
-              <Image
-                src={utcLogo}
-                alt=""
-                className="education-emblem-image"
-                width={55}
-                height={55}
-              />
-            </div>
-            <div className="education-content">
-              <h3>University of Tennessee at Chattanooga</h3>
-              <p>B.S. in Computer Science with a minor in Entrepreneurship</p>
-            </div>
-            <span className="education-years">2020 &mdash; 2024</span>
-          </div>
-        </div>
-      </section>
+      <ResumeSection id="experience-heading" number="01" title="EXPERIENCE">
+        <ResumeExperience />
+        <Technologies />
+      </ResumeSection>
+      <ResumeSection id="highlights-heading" number="02" title="HIGHLIGHTS">
+        <ResumeCard label="Best Practices" title="Angular Upgrade">
+          <p>
+            Upgraded our Angular application from v13 to v21, adopting
+            standalone components, signals, and control flow. Instructed
+            fellow developers on best practices and modern syntax.
+          </p>
+        </ResumeCard>
+      </ResumeSection>
+      <ResumeSection id="commendations-heading" number="03" title="COMMENDATIONS">
+        <ResumeCard author={{ title: "Principal Member of Technical Staff", company: "Environmental Solutions Group" }}>
+          <blockquote>
+            “Noah has been an outstanding ARK developer—contributing across
+            the system, quickly learning what’s needed, and reliably
+            delivering. He delivered high-quality work on short notice that
+            earned strong stakeholder praise.”
+          </blockquote>
+        </ResumeCard>
+      </ResumeSection>
+      <ResumeSection id="education-heading" number="04" title="EDUCATION">
+        <ResumeEducation />
+      </ResumeSection>
     </main>
   );
 }
