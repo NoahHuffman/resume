@@ -10,7 +10,7 @@ export default function AppDemo() {
         <div className={styles["app-demo_camera"]} aria-hidden="true" />
         <video
           className={styles["app-demo_video"]}
-          src="/demo.mp4"
+          src="/sign-tracker-demo.mp4"
           controls
           playsInline
           preload="none"
