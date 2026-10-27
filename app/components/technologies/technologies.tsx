@@ -20,6 +20,7 @@ const skills = [
   "Expo",
   "Firebase",
   "Google Maps API",
+  "Mapbox",
   "Next.js",
   "PostgreSQL",
   "Python",
